@@ -1,0 +1,106 @@
+table {
+    width: 95%;
+}
+
+.tableCol {
+    display: flex;
+    justify-content: center;
+}
+
+.addBtn {
+    top: 41px;
+    left: 1370px;
+    width: 145px;
+    height: 40px;
+    /* UI Properties */
+    background: #940C78 0% 0% no-repeat padding-box;
+    opacity: 1;
+    color: white;
+    border-radius: 8px;
+    border-color: inherit;
+    border: none;
+}
+
+.headerRow {
+    margin: 15px;
+    justify-content: space-between;
+}
+
+.dropDownRow {
+    justify-content: space-between;
+    margin: 25px;
+}
+
+.startDateCol {
+    display: flex;
+    justify-content: center;
+}
+
+.endDateCol {
+    display: flex;
+    justify-content: end;
+}
+
+.dropDownBtns {
+    width: 60%;
+}
+
+.dropDownTextAlign {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropDownArrow {
+    position: relative;
+    top: 4px
+}
+
+
+.tableHeaderRow {
+    background-color: #8BA3C4;
+}
+
+.headerCell {
+    color: white;
+}
+
+.colCell {
+    position: relative;
+    left: 20px
+}
+
+.mat-column-name {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 20% !important;
+    width: 42% !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    word-break: break-word;
+
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.mat-column-email {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 20% !important;
+    width: 45% !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    word-break: break-word;
+
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.pagiRow {
+    justify-content: center;
+}
