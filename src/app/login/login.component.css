@@ -1,0 +1,13 @@
+.formColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-radius: 23px 0px 0px 23px;
+  box-shadow: -10px 3px 99px #00000029;
+  background: #8BA3C4 0% 0% no-repeat padding-box;
+}
+
+.welcomeText {
+
+}

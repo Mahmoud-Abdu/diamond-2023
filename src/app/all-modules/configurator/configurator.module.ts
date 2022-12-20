@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ComponentsRoutingModule } from './components-routing.module';
-import { ComponentsComponent } from './components.component';
+import { ConfiguratorRoutingModule } from './configurator-routing.module';
+import { ConfiguratorComponent } from './configurator.component';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
-    ComponentsComponent
+    ConfiguratorComponent
   ],
   imports: [
     CommonModule,
-    ComponentsRoutingModule,
-    MatPaginatorModule,
-    MatTableModule
+    ConfiguratorRoutingModule,
+    MatTableModule,
+    MatPaginatorModule
   ]
 })
-export class ComponentsModule { }
+export class ConfiguratorModule { }

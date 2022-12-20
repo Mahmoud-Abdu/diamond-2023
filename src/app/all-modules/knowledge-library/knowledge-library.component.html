@@ -1,0 +1,148 @@
+<div class="page-wrapper">
+  <div class="row headerRow">
+      <div class="col-md-4">
+          <h1>Knowledge Library</h1>
+      </div>
+      <div class="col-md-4 col-sm-3 align-self-center text-end">
+
+          <button mat-raised-button class="addBtn ">
+              + Create Library
+          </button>
+      </div>
+
+      <div class="col-md-4" style="position: relative; top: 6px">
+          <div class="input-group rounded">
+              <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                  aria-describedby="search-addon" />
+              <span class="input-group-text border-0" id="search-addon">
+                  <i  style="cursor: pointer;" class="fa fa-search"></i>
+              </span>
+          </div>
+      </div>
+
+  </div>
+
+  <div class="row dropDownRow">
+      <div class="col-md-4 metho">
+          <div class="btn-group dropdown-action dropDownBtns">
+              <button type="button" class="btn btn-white dropdown-toggle dropDownTextAlign"
+                  data-bs-toggle="dropdown">Methodology <i class="fa fa-angle-down dropDownArrow"></i></button>
+              <div class="dropdown-menu ">
+                  <a class="dropdown-item" href="#">All</a>
+                  <a class="dropdown-item" href="#">None</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Read</a>
+                  <a class="dropdown-item" href="#">Unread</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-4 component">
+          <div class="btn-group dropdown-action dropDownBtns">
+              <button type="button" class="btn btn-white dropdown-toggle dropDownTextAlign"
+                  data-bs-toggle="dropdown">Component <i class="fa fa-angle-down  dropDownArrow"></i></button>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">All</a>
+                  <a class="dropdown-item" href="#">None</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Read</a>
+                  <a class="dropdown-item" href="#">Unread</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-4 general">
+          <div class="btn-group dropdown-action dropDownBtns">
+              <button type="button" class="btn btn-white dropdown-toggle dropDownTextAlign"
+                  data-bs-toggle="dropdown">General <i class="fa fa-angle-down dropDownArrow"></i></button>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">All</a>
+                  <a class="dropdown-item" href="#">None</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Read</a>
+                  <a class="dropdown-item" href="#">Unread</a>
+              </div>
+          </div>
+      </div>
+
+
+  </div>
+  <div class="row dropDownRow">
+    <div class="col-md-4 metho">
+        <div class="btn-group dropdown-action dropDownBtns">
+            <button type="button" class="btn btn-white dropdown-toggle dropDownTextAlign"
+                data-bs-toggle="dropdown">Process <i class="fa fa-angle-down dropDownArrow"></i></button>
+            <div class="dropdown-menu ">
+                <a class="dropdown-item" href="#">All</a>
+                <a class="dropdown-item" href="#">None</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Read</a>
+                <a class="dropdown-item" href="#">Unread</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 component">
+        <div class="btn-group dropdown-action dropDownBtns">
+            <button type="button" class="btn btn-white dropdown-toggle dropDownTextAlign"
+                data-bs-toggle="dropdown">Project <i class="fa fa-angle-down  dropDownArrow"></i></button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">All</a>
+                <a class="dropdown-item" href="#">None</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Read</a>
+                <a class="dropdown-item" href="#">Unread</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 general">
+        <div class="btn-group dropdown-action dropDownBtns">
+            <button type="button" class="btn btn-white dropdown-toggle dropDownTextAlign"
+                data-bs-toggle="dropdown">University <i class="fa fa-angle-down dropDownArrow"></i></button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">All</a>
+                <a class="dropdown-item" href="#">None</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Read</a>
+                <a class="dropdown-item" href="#">Unread</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center" >
+  <div class="overFlow ">
+
+    <div class="row dataRows" *ngFor="let item of dummy">
+      <div class="col-md-3 dataColumns">
+        <h4 class="fontStyle">Facilitators Racial Equity Checklist</h4>
+      </div>
+
+      <div class="col-md-3 dataColumns">
+        <h5 class="fontStyle" style="font-family: 'inter !important';">Dec 24,2013</h5>
+      </div>
+
+      <div class="col-md-3 dataColumns">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+      </div>
+
+      <div class="col-md-3 dataColumns">
+        <button mat-raised-button class="addBtn">
+          <mat-icon style="position: relative; top:6px; right: 8px">remove_red_eye</mat-icon> DETAILS
+      </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+</div>

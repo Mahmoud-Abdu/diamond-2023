@@ -31,15 +31,15 @@
                 The actual rendered columns are set as a property on the row definition" -->
 
           <!-- Position Column -->
-          <ng-container matColumnDef="name">
-              <th mat-header-cell *matHeaderCellDef class="headerCell"> Name </th>
-              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          <ng-container matColumnDef="client">
+              <th mat-header-cell *matHeaderCellDef class="headerCell"> Client </th>
+              <td mat-cell *matCellDef="let element"> {{element.client}} </td>
           </ng-container>
 
           <!-- Name Column -->
-          <ng-container matColumnDef="methodology">
-              <th mat-header-cell *matHeaderCellDef class="headerCell"> Methodology </th>
-              <td mat-cell *matCellDef="let element"> {{element.methodology}} </td>
+          <ng-container matColumnDef="candidateProjectName">
+              <th mat-header-cell *matHeaderCellDef class="headerCell"> Candidate Project Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.candidateProjectName}} </td>
           </ng-container>
 
           <!-- Weight Column -->

@@ -1,0 +1,96 @@
+.dropDownRow {
+  justify-content: space-between;
+  margin: 25px;
+}
+
+.general {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  right: 46px;
+}
+
+
+.dropDownBtns {
+  width: 60%;
+}
+
+.dropDownTextAlign {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropDownArrow {
+  position: relative;
+  top: 4px
+}
+
+.addBtn {
+  top: 41px;
+  left: 1370px;
+  width: 145px;
+  height: 40px;
+  /* UI Properties */
+  background: #940C78 0% 0% no-repeat padding-box;
+  opacity: 1;
+  color: white;
+  border-radius: 8px;
+  border-color: inherit;
+  border: none;
+}
+
+
+.headerRow {
+  margin: 15px;
+  justify-content: space-between;
+}
+
+
+.dataRows {
+
+  width: 90%;
+  margin-left: 60px;
+  margin-bottom: 20px;
+  height: 107px;
+  /* UI Properties */
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px #00000029;
+  border-radius: 20px;
+  opacity: 1;
+}
+
+.overFlow {
+   width: 90%;
+  height: 65vh;
+  overflow: auto;
+  text-align: justify;
+  padding: 20px;
+}
+
+.dataColumns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fontStyle {
+  font-weight: bolder;
+  font-family: 'Roboto';
+}
+
+.checked {
+  color: #174789
+}
+
+.metho {
+  justify-content: space-around;
+  display: flex;
+  position: relative;
+  left: 14px;
+}
+
+.component {
+  display: flex;
+  justify-content: center;
+}
+
