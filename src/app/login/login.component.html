@@ -1,31 +1,72 @@
-<!-- Main Wrapper -->
-<div class="main-wrapper">
-  <div class="container">
-    <div class="row" style="width: 100%">
-      <div class="col-md-6"></div>
-
-      <div
-        class="col-md-6"
-        style="
-          border-radius: 23px 0px 0px 23px;
-          box-shadow: -10px 3px 99px #00000029;
-          background: #8ba3c4 0% 0% no-repeat padding-box;
-          height: 100vh;
-        "
-      >
-        <div class="row" style="width: 100%">
-          <!-- <div class="col-md-12"> -->
-          <h1 class="welcomeText">Welcome To Diamond</h1>
-          <!-- </div> -->
-        </div>
-        <div class="row" style="width: 100%">
-          <!-- <div class="col-md-12"> -->
-          <p>LOGIN TO YOUR ACCOUNT</p>
-
-          <!-- </div> -->
+<div class="ps-md-0">
+  <div class="row g-0">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-10 mx-auto">
+              <h3 class="login-heading mb-5">welcome to daimond!</h3>
+              <!-- Sign In Form -->
+              <form [formGroup]="logInForm" (ngSubmit)="onSubmit()">
+                <p class="text">login to your account</p>
+                <div>
+                  <mat-form-field appearance="outline" class="box mb-3">
+                    <input
+                      matInput
+                      type="email"
+                      #email
+                      id="email"
+                      placeholder="Email"
+                      formControlName="Email"
+                    />
+                  </mat-form-field>
+                </div>
+                <div>
+                  <mat-form-field appearance="outline" class="mb-3">
+                    <input
+                      matInput
+                      [type]="hide ? 'password' : 'text'"
+                      id="password"
+                      #userPassword
+                      type="password"
+                      placeholder="Password"
+                      formControlName="Password"
+                    />
+                    <button
+                      mat-icon-button
+                      matSuffix
+                      (click)="hide = !hide"
+                      [attr.aria-label]="'Hide password'"
+                      [attr.aria-pressed]="hide"
+                    >
+                      <mat-icon>{{
+                        hide ? "visibility_off" : "visibility"
+                      }}</mat-icon>
+                    </button>
+                  </mat-form-field>
+                </div>
+                <div class="form-check d-flex justify-content-between">
+                  <mat-checkbox class="example-margin" color="primary"
+                    >Remember password</mat-checkbox
+                  >
+                  <div>
+                    <a class="small" href="#">Forgot password?</a>
+                  </div>
+                </div>
+                <div class="box-b">
+                  <button
+                    class="btn btn-lg btn-login text-uppercase"
+                    type="submit"
+                    value="Log in"
+                      > log in
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- /Main Wrapper -->
 </div>

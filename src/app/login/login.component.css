@@ -1,4 +1,4 @@
-.formColumn {
+/* .formColumn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,4 +10,56 @@
 
 .welcomeText {
 
+} */
+
+/* ng marila */
+::ng-deep .mat-form-field-wrapper {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.login {
+  min-height: 100vh;
+  border-radius: 20px 0 0 0;
+  background-color: #aebed6;
+}
+
+.bg-image {
+  background-image: url("../../assets/img/download.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-heading {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 35px;
+  text-align: center;
+  color: #174789;
+  letter-spacing: 2px;
+  /* margin-bottom: 70px; */
+}
+.text {
+  color: #174789;
+  text-transform: uppercase;
+}
+
+.mat-form-field {
+  background-color: white;
+  display: block;
+  padding-bottom: 0;
+  border-radius: 5px;
+}
+.box-b {
+  padding-top: 20px;
+  text-align: left;
+}
+
+.btn-login {
+  float: right;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 8px 60px;
+  background-color: #174789;
+  color: white;
 }
