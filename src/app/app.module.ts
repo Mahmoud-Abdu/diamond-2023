@@ -11,6 +11,19 @@ import { Error500Component } from './error500/error500.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
+// angualr material
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+
+
+
+
+
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
 };
@@ -29,6 +42,15 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     DataTablesModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    // angualr material
+    MatFormFieldModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatButtonModule
+
   ],
   providers: [
     {
