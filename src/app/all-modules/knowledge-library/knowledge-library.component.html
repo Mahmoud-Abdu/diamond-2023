@@ -81,7 +81,6 @@
             </div>
         </div>
     </div>
-
     <div class="col-md-4 component">
         <div class="btn-group dropdown-action dropDownBtns">
             <button type="button" class="btn btn-white dropdown-toggle dropDownTextAlign"
@@ -132,8 +131,8 @@
       </div>
 
       <div class="col-md-3 dataColumns">
-        <button mat-raised-button class="addBtn">
-          <mat-icon style="position: relative; top:6px; right: 8px">remove_red_eye</mat-icon> DETAILS
+        <button mat-raised-button class="addBtn" (click)="openDialog()">
+          <mat-icon style="position: relative; top:6px; right: 8px" >remove_red_eye</mat-icon> details
       </button>
       </div>
     </div>
