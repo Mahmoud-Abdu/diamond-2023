@@ -15,7 +15,6 @@ export class KnowledgeLibraryDetailsComponent implements OnInit {
     public dialogRef: MatDialogRef<KnowledgeLibraryDetailsComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
-    س
   close(): void {
     this.dialogRef.close();
   }
