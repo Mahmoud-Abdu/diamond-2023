@@ -5,10 +5,12 @@ import { ComponentsRoutingModule } from './components-routing.module';
 import { ComponentsComponent } from './components.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { AddComponentComponent } from './add-component/add-component.component';
 
 @NgModule({
   declarations: [
-    ComponentsComponent
+    ComponentsComponent,
+    AddComponentComponent
   ],
   imports: [
     CommonModule,

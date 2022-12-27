@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { AddComponentComponent } from './add-component/add-component.component';
 
 export interface PeriodicElement {
   name: string;
@@ -34,8 +36,21 @@ export class ComponentsComponent implements OnInit {
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA)
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
+  openDialog() {
 
+    const dialogRef = this.dialog.open(AddComponentComponent, {
+      position: { right: '0', },
+      height:'100%',
+
+
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+
+  }
   ngOnInit(): void {
     setTimeout(() =>  this.dataSource.paginator = this.paginator)
 
