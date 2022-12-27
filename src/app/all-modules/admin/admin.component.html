@@ -4,12 +4,10 @@
             <h1>Users</h1>
         </div>
         <div class="col-md-4 col-sm-3 align-self-center text-end">
-
-            <button mat-raised-button class="addBtn">
+            <button mat-raised-button class="addBtn" (click)="openDialog()">
                 + Add User
             </button>
         </div>
-
         <div class="col-md-4" style="position: relative; top: 6px">
             <div class="input-group rounded">
                 <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"

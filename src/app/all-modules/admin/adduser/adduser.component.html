@@ -1,0 +1,21 @@
+<div class="info">
+  <h3 mat-dialog-title>Details</h3>
+</div>
+<div class="container">
+  <form [formGroup]="addUserForm" mat-dialog-content (ngSubmit)="onSubmit()">
+    <div class="row forms">
+      <label>Full Name</label>
+      <input class="form-control" formControlName="Name" type="text" />
+      <label>Email Address</label>
+      <input class="form-control" formControlName="Email" type="text" />
+      <label>Phone Number</label>
+      <input class="form-control" formControlName="Phone" type="number" />
+      <label>Job Title</label>
+      <input class="form-control" formControlName="Jop" type="text" />
+    </div>
+    <div class="d-flex justify-content-around">
+      <button type="submit" class="d-btn">done</button>
+      <button type="submit" class="c-btn" (click)="close()">colse</button>
+    </div>
+  </form>
+</div>
