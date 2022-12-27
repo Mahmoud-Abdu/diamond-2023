@@ -6,16 +6,20 @@ import { ConfiguratorComponent } from './configurator.component';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { AddConfiguratorComponent } from './add-configurator/add-configurator.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
-    ConfiguratorComponent
+    ConfiguratorComponent,
+    AddConfiguratorComponent
   ],
   imports: [
     CommonModule,
     ConfiguratorRoutingModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatIconModule
   ]
 })
 export class ConfiguratorModule { }

@@ -1,0 +1,36 @@
+.title{
+padding-left: 20px;
+padding: 30px 0 60px 0;
+}
+.title h3{
+  padding-left: 15px;
+}
+.btns {
+  width: 100%;
+  padding-left: 13px;
+}
+.btns .btn {
+  margin-left: 15px;
+  padding: 5px 22px;
+  border: 1px solid #174789;
+  box-shadow: 0px 0px 20px #00000029;
+
+}
+.btns .btnEx {
+  background: #174789;
+  color: #fff;
+}
+.btns .btn-date{
+  background: #fff;
+  color:#174789;
+}
+
+table {
+  width: 95%;
+}
+
+.tableCol {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}

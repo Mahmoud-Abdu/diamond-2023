@@ -1,0 +1,51 @@
+
+  <div class="page-wrapper">
+    <div class="title d-flex"><mat-icon aria-hidden="false"  fontIcon="keyboard_arrow_left">keyboard_arrow_left</mat-icon> <h3> Configuratar</h3></div>
+
+    <div class="row btns">
+      <div class="col d-flex justify-content-start">
+        <button class="btn btnEx btn-primary">Export</button>
+      </div>
+      <div class="col d-flex justify-content-end">
+        <button class="btn btn-date btn-secondary">Month</button>
+        <button class="btn btn-date btn-secondary">Week</button>
+        <button class="btn btn-date btn-secondary">Day</button>
+      </div>
+    </div>
+    <div class="col-mid-12 tableCol ">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+          <!-- Position Column -->
+          <ng-container matColumnDef="wps">
+              <th mat-header-cell *matHeaderCellDef class="headerCell"> wps </th>
+              <td mat-cell *matCellDef="let element"> {{element.wps}} </td>
+          </ng-container>
+          <!-- Name Column -->
+          <ng-container matColumnDef="taskName">
+              <th mat-header-cell *matHeaderCellDef class="headerCell">Task name </th>
+              <td mat-cell *matCellDef="let element"><mat-icon>folder_open</mat-icon> {{element.taskName}}   </td>
+          </ng-container>
+          <!-- Weight Column -->
+          <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef class="headerCell"> Created date </th>
+              <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+          </ng-container>
+          <ng-container matColumnDef="duration">
+            <th mat-header-cell *matHeaderCellDef class="headerCell"> Duration </th>
+            <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
+        </ng-container>
+        <!-- Weight Column -->
+        <ng-container matColumnDef="resources">
+            <th mat-header-cell *matHeaderCellDef class="headerCell"> Resources </th>
+            <td mat-cell *matCellDef="let element"> {{element.resources}} </td>
+        </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns" class="tableHeaderRow"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns; "></tr>
+
+      </table>
+
+  </div>
+
+  </div>

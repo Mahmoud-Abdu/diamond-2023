@@ -1,5 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
-// import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -10,7 +9,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 export class AddComponentComponent implements OnInit {
 
   constructor() { }
- 
+
 
 
   ngOnInit(): void {
