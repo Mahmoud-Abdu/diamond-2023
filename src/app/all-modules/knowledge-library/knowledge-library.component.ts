@@ -1,8 +1,8 @@
-import { KnowledgeLibraryDialogComponent } from './knowledge-library-dialog/knowledge-library-dialog.component';
+import { KnowledgeLibraryDetailsComponent } from './knowledge-library-details/knowledge-library-details.component';
 import { Component, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
-KnowledgeLibraryDialogComponent
+import { MatDialog } from '@angular/material/dialog';
 
+ 
 @Component({
   selector: 'app-knowledge-library',
   templateUrl: './knowledge-library.component.html',
@@ -13,23 +13,24 @@ export class KnowledgeLibraryComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {
 
-   }
+  }
 
-    openDialog() {
+  openDialog() {
 
-      const dialogRef = this.dialog.open(KnowledgeLibraryDialogComponent, {
-        position: { right: '0', },
-        height:'100%'
+    const dialogRef = this.dialog.open(KnowledgeLibraryDetailsComponent, {
+      position: { right: '0', },
+      height: '100%'
 
-      });
+    });
 
-      dialogRef.afterClosed().subscribe(result => {
-        console.log('The dialog was closed');
-      });    }
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 
   dummy = [];
   ngOnInit(): void {
-    for(let i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
       this.dummy.push({})
     }
     console.log('knowledge is here', this.dummy)
