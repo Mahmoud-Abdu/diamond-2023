@@ -38,6 +38,10 @@ const routes: Routes = [
       {
         path: "configurator",
         loadChildren: () => import('./configurator/configurator.module').then(m => m.ConfiguratorModule)
+      },
+      {
+        path: "estimator",
+        loadChildren: () => import('./estimator/estimator.module').then(m => m.EstimatorModule)
       }
 
     ],
