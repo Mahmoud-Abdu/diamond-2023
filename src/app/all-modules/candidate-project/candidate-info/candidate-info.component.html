@@ -1,0 +1,172 @@
+<div class="page-wrapper">
+  <div class="title d-flex">
+    <mat-icon aria-hidden="false" fontIcon="keyboard_arrow_left"
+      >keyboard_arrow_left</mat-icon
+    >
+    <h3>Configuratar</h3>
+  </div>
+
+  <!-- box start  -->
+  <div class="box">
+    <h5>General Information</h5>
+    <div class="row info">
+      <div class="col-md-4 d-flex">
+        <p class="head">Project Name :</p>
+        <p class="text">ADSC IT Strategy</p>
+      </div>
+      <div class="col-md-4 d-flex">
+        <p class="head">Project Description :</p>
+        <p class="text">
+          The Abu Dhabi Sports Council established a need for their IT Strategy.
+        </p>
+      </div>
+      <div class="col-md-4 d-flex">
+        <p class="head">Project Owner :</p>
+        <p class="text">Leon R. Casaubon</p>
+      </div>
+      <div class="col-md-4 d-flex">
+        <p class="head">Project Type :</p>
+        <p class="text"></p>
+      </div>
+      <div class="col-md-4 d-flex">
+        <p class="head">Project Status :</p>
+        <p class="text">Draft</p>
+      </div>
+      <div class="col-md-4 d-flex">
+        <p class="head">Project Status Date :</p>
+        <p class="text">2010-06-12T09:41:49.090Z</p>
+      </div>
+      <div class="col-md-4 d-flex">
+        <p class="head">Project Client :</p>
+        <p class="text">UAE - Abu Dhabi Sports Council</p>
+      </div>
+      <div class="col-md-6">
+        <p class="head">Project Client Description :</p>
+        <p class="text"></p>
+      </div>
+      <div class="col-md-4 d-flex">
+        <p class="head">Project Created By :</p>
+        <p class="text">Leon R. Casaubon</p>
+      </div>
+      <div class="col-md-4 d-flex">
+        <p class="head">Project Created Date :</p>
+        <p class="text">2010-06-12T09:41:49.090Z</p>
+      </div>
+    </div>
+  </div>
+  <!-- box end -->
+
+  <!--  accordion -->
+  <!-- goals -->
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> goals </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div *ngFor="let goal of goals; let i = index">
+        <div class="row goal">
+          <p class="col-md-1 goal-title">gola {{ i + 1 }}</p>
+          <div class="goal-box col-md-9">
+            <div class="row">
+              <div class="col-md-4 d-flex justify-content-start">
+                <p class="goal-h">Goal Name :</p>
+                <p class="goal-t">{{ goal.name }}</p>
+              </div>
+              <div class="col-md-4 d-flex justify-content-start">
+                <p class="goal-h">Goal Description :</p>
+                <p class="goal-t">{{ goal.des }}</p>
+              </div>
+              <div class="col-md-4 d-flex justify-content-start">
+                <p class="goal-h">Goal Type :</p>
+                <p class="goal-t">{{ goal.type }}</p>
+              </div>
+              <div class="col-md-12 d-flex justify-content-start">
+                <p class="goal-h">Goal Objectives :</p>
+                <p class="goal-t">{{ goal.goolObject }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <!-- *********************************** -->
+  <!-- Scope Records -->
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> goals </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div *ngFor="let goal of goals; let i = index">
+        <div class="row goal">
+          <p class="col-md-1 goal-title">gola {{ i + 1 }}</p>
+          <div class="goal-box col-md-9">
+            <div class="row">
+              <div class="col-md-4 d-flex justify-content-start">
+                <p class="goal-h">Goal Name :</p>
+                <p class="goal-t">{{ goal.name }}</p>
+              </div>
+              <div class="col-md-4 d-flex justify-content-start">
+                <p class="goal-h">Goal Description :</p>
+                <p class="goal-t">{{ goal.des }}</p>
+              </div>
+              <div class="col-md-4 d-flex justify-content-start">
+                <p class="goal-h">Goal Type :</p>
+                <p class="goal-t">{{ goal.type }}</p>
+              </div>
+              <div class="col-md-12 d-flex justify-content-start">
+                <p class="goal-h">Goal Objectives :</p>
+                <p class="goal-t">{{ goal.goolObject }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <!-- Scope Records -->
+  <!-- start Stakeholders -->
+  <mat-accordion class="edit">
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> goals </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div *ngFor="let goal of goals; let i = index">
+        <div class="row goal">
+          <p class="col-md-1 goal-title">gola {{ i + 1 }}</p>
+          <div class="goal-box col-md-9">
+            <div class="row">
+              <div class="col-md-4 d-flex justify-content-start">
+                <p class="goal-h">Goal Name :</p>
+                <p class="goal-t">{{ goal.name }}</p>
+              </div>
+              <div class="col-md-4 d-flex justify-content-start">
+                <p class="goal-h">Goal Description :</p>
+                <p class="goal-t">{{ goal.des }}</p>
+              </div>
+              <div class="col-md-4 d-flex justify-content-start">
+                <p class="goal-h">Goal Type :</p>
+                <p class="goal-t">{{ goal.type }}</p>
+              </div>
+              <div class="col-md-12 d-flex justify-content-start">
+                <p class="goal-h">Goal Objectives :</p>
+                <p class="goal-t">{{ goal.goolObject }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <!-- Stakeholders end -->
+  <!-- bs kda end  -->
+</div>

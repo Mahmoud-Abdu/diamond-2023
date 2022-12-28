@@ -1,0 +1,83 @@
+/* page title  */
+.title {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.title h3 {
+  padding-left: 15px;
+}
+/********************************************/
+/* General Information start  */
+.box {
+  background: #ffffff;
+  box-shadow: 0px 0px 20px #00000029;
+  border: 1px solid #e8ebee;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 30px auto;
+  padding: 30px;
+  width: 95%;
+}
+.box h5 {
+  color: #4b4b4b;
+  font-weight: bold;
+}
+.info {
+  padding-top: 30px;
+}
+.info > div {
+  padding-bottom: 30px;
+  font-size: 13px;
+}
+.info .head {
+  color: #949494;
+}
+.info .text {
+  color: #545454;
+  font-weight: bold;
+  width: 64%;
+  padding-left: 15px;
+}
+
+/* General Information end */
+
+/* angualr mat */
+.mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 8px;
+}
+.mat-expansion-panel {
+  width: 95%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 20px #00000029;
+  border: 1px solid #e8ebee;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+/***************************/
+/* start goals  */
+.goal {
+  background: #fff;
+  box-shadow: 0px 0px 20px #00000029;
+  border: 1px solid #940c78;
+  margin-bottom: 20px;
+  padding: 15px 0;
+}
+.goal .goal-title {
+  margin: auto 0;
+  color: #545454;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.goal-h {
+  width: 44%;
+  font-size: 12px;
+  color: #949494;
+}
+.goal-t {
+  color: #545454;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: capitalize;
+}

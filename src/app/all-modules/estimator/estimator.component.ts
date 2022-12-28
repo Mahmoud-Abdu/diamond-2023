@@ -4,23 +4,23 @@ import { MatTableDataSource } from '@angular/material/table';
 
 
 export interface PeriodicElement {
-  client:string;
+  client: string;
   candidateProject: string;
   projectPlan: string;
   planVersion: number;
-  estimatorName:string;
-  planStatus:string;
+  estimatorName: string;
+  planStatus: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-{client:"Delegata",candidateProject:"Diamond Tour Example",projectPlan:"A Ro Demonstration Plan",planVersion:1,estimatorName:"Estimator for Yesser Tour",planStatus:"Draft"},
-{client:"Delegata",candidateProject:"Diamond Tour Example",projectPlan:"A Ro Demonstration Plan",planVersion:1,estimatorName:"Estimator for Yesser Tour",planStatus:"Draft"},
-{client:"Delegata",candidateProject:"Diamond Tour Example",projectPlan:"A Ro Demonstration Plan",planVersion:1,estimatorName:"Estimator for Yesser Tour",planStatus:"Draft"},
-{client:"Delegata",candidateProject:"Diamond Tour Example",projectPlan:"A Ro Demonstration Plan",planVersion:1,estimatorName:"Estimator for Yesser Tour",planStatus:"Draft"},
-{client:"Delegata",candidateProject:"Diamond Tour Example",projectPlan:"A Ro Demonstration Plan",planVersion:1,estimatorName:"Estimator for Yesser Tour",planStatus:"Draft"},
-{client:"Delegata",candidateProject:"Diamond Tour Example",projectPlan:"A Ro Demonstration Plan",planVersion:1,estimatorName:"Estimator for Yesser Tour",planStatus:"Draft"},
-{client:"Delegata",candidateProject:"Diamond Tour Example",projectPlan:"A Ro Demonstration Plan",planVersion:1,estimatorName:"Estimator for Yesser Tour",planStatus:"Draft"},
-{client:"Delegata",candidateProject:"Diamond Tour Example",projectPlan:"A Ro Demonstration Plan",planVersion:1,estimatorName:"Estimator for Yesser Tour",planStatus:"Draft"},
+  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
+  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
+  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
+  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
+  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
+  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
+  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
+  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
 
 
 ];
@@ -32,12 +32,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class EstimatorComponent implements OnInit {
 
-  displayedColumns: string[] = ['client','candidateProject','projectPlan','planVersion','estimatorName','planStatus'];
+  displayedColumns: string[] = ['client', 'candidateProject', 'projectPlan', 'planVersion', 'estimatorName', 'planStatus', 'star'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA)
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor() { }
-
+  constructor() {
+  }
   ngOnInit(): void {
     setTimeout(() => this.dataSource.paginator = this.paginator);
 

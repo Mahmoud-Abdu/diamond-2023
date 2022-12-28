@@ -4,17 +4,25 @@ import { EstimatorComponent } from './estimator.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { EstimatorRoutes } from './estimator.routing';
+import {MatIconModule} from '@angular/material/icon';
+import { EstimatorInfoComponent } from './estimator-info/estimator-info.component';
 
 
 
 @NgModule({
   declarations: [
-    EstimatorComponent
+    EstimatorComponent,
+    EstimatorInfoComponent
   ],
   imports: [
-    CommonModule,EstimatorRoutes,
+    CommonModule,
+    EstimatorRoutes,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatIconModule
+
+
+
   ]
 })
 export class EstimatorModule { }

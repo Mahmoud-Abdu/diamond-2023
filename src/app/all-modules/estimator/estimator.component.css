@@ -6,6 +6,10 @@ table {
   display: flex;
   justify-content: center;
 }
+td.mat-column-star {
+  width: 20px;
+  padding-right: 8px;
+}
 
 .addBtn {
   top: 41px;
