@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, ViewChild } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
@@ -18,8 +18,6 @@ export class KnowledgeLibraryDetailsComponent implements OnInit {
   close(): void {
     this.dialogRef.close();
   }
-
-
 
   ngOnInit(): void {
   }
