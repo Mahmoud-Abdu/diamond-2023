@@ -1,7 +1,7 @@
 <div class="page-wrapper">
   <div class="row headerRow">
       <div class="col-md-4">
-          <h1>Methodology Builder</h1>
+          <h1>Candidate Projects</h1>
       </div>
       <div class="col-md-4 col-sm-3 align-self-center text-end">
 
@@ -31,37 +31,37 @@
                 The actual rendered columns are set as a property on the row definition" -->
 
           <!-- Position Column -->
-          <ng-container matColumnDef="client">
+          <ng-container matColumnDef="CPJ_client_name">
               <th mat-header-cell *matHeaderCellDef class="headerCell"> Client </th>
-              <td mat-cell *matCellDef="let element"> {{element.client}} </td>
+              <td mat-cell *matCellDef="let element"> {{element.CPJ_client_name}} </td>
           </ng-container>
 
           <!-- Name Column -->
-          <ng-container matColumnDef="candidateProjectName">
+          <ng-container matColumnDef="CPJ_name">
               <th mat-header-cell *matHeaderCellDef class="headerCell"> Candidate Project Name </th>
-              <td mat-cell *matCellDef="let element"> {{element.candidateProjectName}} </td>
+              <td mat-cell *matCellDef="let element"> {{element.CPJ_name}} </td>
           </ng-container>
 
           <!-- Weight Column -->
-          <ng-container matColumnDef="category">
+          <ng-container matColumnDef="CPJ_description">
               <th mat-header-cell *matHeaderCellDef class="headerCell"> Category </th>
-              <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+              <td mat-cell *matCellDef="let element"> {{element.CPJ_description}} </td>
           </ng-container>
-          <ng-container matColumnDef="outcome">
+          <ng-container matColumnDef="CPJ_status">
             <th mat-header-cell *matHeaderCellDef class="headerCell"> Outcome </th>
-            <td mat-cell *matCellDef="let element"> {{element.outcome}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.CPJ_status}} </td>
         </ng-container>
 
         <!-- Name Column -->
-        <ng-container matColumnDef="status">
+        <ng-container matColumnDef="usr_full_name">
             <th mat-header-cell *matHeaderCellDef class="headerCell"> Status </th>
-            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.usr_full_name}} </td>
         </ng-container>
 
         <!-- Weight Column -->
-        <ng-container matColumnDef="author">
+        <ng-container matColumnDef="buttons">
             <th mat-header-cell *matHeaderCellDef class="headerCell"> Author </th>
-            <td mat-cell *matCellDef="let element"> {{element.author}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.buttons}} </td>
         </ng-container>
           <tr mat-header-row *matHeaderRowDef="displayedColumns" class="tableHeaderRow"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns; " routerLink="general-information" ></tr>

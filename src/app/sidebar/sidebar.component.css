@@ -1,0 +1,17 @@
+.sidebar{}
+.nav-profile{
+
+  height: 150px;
+  display: flex;
+}
+.nav-profile, .nav-profile a:hover{
+  background: none;
+}
+
+.sidebar-menu li.active {
+
+}
+
+.sidebar-menu>ul>li>a{
+  padding: 15px 15px;
+}
