@@ -14,15 +14,17 @@ export class ConfiguratorComponent implements OnInit {
   dataSource: any;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   constructor(private api: CallapiService) { }
-
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
   ngOnInit(): void {
     this.displayedColumns = ['CPJ_client_name', 'CPJ_name', 'PPV_name', 'PPV_version', 'PPV_status', 'usr_full_name','buttons'];
     this.api.getConf().subscribe((data: any) => {
       this.dataSource = new MatTableDataSource(data)
       this.dataSource.paginator = this.paginator
     })
-
-
   }
+
 
 }

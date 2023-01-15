@@ -14,7 +14,7 @@ table {
   width: 170px;
   height: 40px;
   /* UI Properties */
-  background: #940C78 0% 0% no-repeat padding-box;
+  background: #940c78 0% 0% no-repeat padding-box;
   opacity: 1;
   color: white;
   border-radius: 8px;
@@ -53,12 +53,11 @@ table {
 
 .dropDownArrow {
   position: relative;
-  top: 4px
+  top: 4px;
 }
 
-
 .tableHeaderRow {
-  background-color: #8BA3C4;
+  background-color: #8ba3c4;
 }
 
 .headerCell {
@@ -67,7 +66,7 @@ table {
 
 .colCell {
   position: relative;
-  left: 20px
+  left: 20px;
 }
 
 /* .mat-column-name {

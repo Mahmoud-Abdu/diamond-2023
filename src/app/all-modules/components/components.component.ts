@@ -18,7 +18,7 @@ export class ComponentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.displayedColumns = ['WPC_name', 'CMP_name', 'WPC_category', 'WPC_status', 'usr_full_name', 'buttons'];
-    this.api.getComp().subscribe((data :any) => {
+    this.api.getComp().subscribe((data: any) => {
       this.dataSource = new MatTableDataSource(data)
       this.dataSource.paginator = this.paginator;
     })

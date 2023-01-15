@@ -11,13 +11,11 @@
       </div>
 
       <div class="col-md-4" style="position: relative; top: 6px">
-          <div class="input-group rounded">
-              <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                  aria-describedby="search-addon" />
-              <span class="input-group-text border-0" id="search-addon">
-                  <i   style="cursor: pointer;" class="fa fa-search"></i>
-              </span>
-          </div>
+        <mat-form-field>
+          <mat-label>Filter</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
       </div>
 
   </div>
@@ -25,7 +23,7 @@
 
 
   <div class="col-mid-12 tableCol ">
-      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
 
           <!--- Note that these columns can be defined in any order.
                 The actual rendered columns are set as a property on the row definition" -->
@@ -35,7 +33,6 @@
               <th mat-header-cell *matHeaderCellDef class="headerCell"> Client </th>
               <td mat-cell *matCellDef="let element"> {{element.CPJ_client_name}} </td>
           </ng-container>
-
           <!-- Name Column -->
           <ng-container matColumnDef="CPJ_name">
               <th mat-header-cell *matHeaderCellDef class="headerCell"> Candidate Project Name </th>

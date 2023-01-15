@@ -1598,7 +1598,7 @@ table.table th {
 	position: fixed;
 	top: 60px;
 	transition: all 0.2s ease-in-out 0s;
-	width: 230px;
+	width: 260px;
 	z-index: 1001;
 }
 
@@ -1862,7 +1862,6 @@ table.table th {
 
 .sidebar-menu li .active {
 	background: linear-gradient(90deg, rgba(67, 203, 255, 1) 25%, rgba(151, 8, 204, 1) 100%);
-
 	color: #fff;
 }
 
@@ -1894,7 +1893,7 @@ table.table th {
 
 .page-wrapper {
 	left: 0;
-	margin-left: 230px;
+	margin-left: 260px;
 	padding-top: 60px;
 	position: relative;
 	transition: all 0.2s ease-in-out;
@@ -9170,6 +9169,7 @@ form .btn-gradient-primary {
 	.nav-tabs.nav-tabs-top>li>a.active:hover,
 	.nav-tabs.nav-tabs-top>li>a.active:focus {
 		border-top-color: #cf1b1b;
+
 	}
 
 	.nav-tabs.nav-tabs-bottom>li {
@@ -9188,6 +9188,7 @@ form .btn-gradient-primary {
 		-o-transition: none 0s ease 0s;
 		-ms-transition: none 0s ease 0s;
 		-webkit-transition: none 0s ease 0s;
+
 	}
 
 	.nav-tabs.nav-tabs-solid {
@@ -9521,6 +9522,7 @@ form .btn-gradient-primary {
 		background-color: #f5f5f5;
 		border-color: transparent transparent transparent #cf1b1b;
 		border-left-width: 2px;
+
 	}
 
 	.nav-tabs>li.open:not(.active)>a,

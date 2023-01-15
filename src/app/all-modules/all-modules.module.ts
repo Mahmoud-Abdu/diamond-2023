@@ -12,6 +12,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { AllModulesData } from "src/assets/all-modules-data/all-modules-data";
 import { AllModulesService } from "./all-modules.service";
+import {MatIconModule} from '@angular/material/icon';
+
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -24,6 +26,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
      PerfectScrollbarModule,
      HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(AllModulesData),
+    MatIconModule
   ],
    providers: [
      AllModulesService,

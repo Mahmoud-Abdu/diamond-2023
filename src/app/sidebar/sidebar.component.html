@@ -14,37 +14,38 @@
                                 <img src="assets/img/profiles/avatar-17.jpg" alt="profile">
 
                             </div>
-                            <div class="nav-profile-text d-flex">
-                                <span class="font-weight-bold mb-2">Mohammed Alhasan</span>
+                            <div class="nav-profile-text">
+                                <span class="font-weight-bold">Mohammed Alhasan</span>
                             </div>
                             <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
                         </a>
                     </li>
 
-                    <li [ngClass]="[(activeRoute === 'knowledge' ? 'active' : '')] ">
-                      <a routerLink="/"><i class="feather-grid"></i> <span>home</span></a>
+                    <li [ngClass]="[(activeRoute === 'home' ? 'active' : '')] ">
+                      <a routerLink="/"><mat-icon>home</mat-icon>
+                        <span>home</span></a>
                   </li>
                     <li [ngClass]="[(activeRoute === 'admin' ? 'active' : '')] ">
-                        <a routerLink="/admin"><i class="feather-grid"></i> <span>Admin</span></a>
+                        <a routerLink="/admin">	<mat-icon>person</mat-icon> <span>Admin</span></a>
                     </li>
                     <li [ngClass]="[(activeRoute === 'knowledge' ? 'active' : '')] ">
-                        <a routerLink="/knowledge"><i class="feather-grid"></i> <span>Knowledge Library</span></a>
+                        <a routerLink="/knowledge"><mat-icon>library_books</mat-icon> <span>Knowledge Library</span></a>
                     </li>
 
                     <li [ngClass]="[activeRoute === 'components' ? 'active' : '']">
-                        <a routerLink="/components"><i class="feather-layout"></i> <span>Components</span></a>
+                        <a routerLink="/components">	<mat-icon>apps</mat-icon> <span>Components</span></a>
                     </li>
                     <li [ngClass]="[activeRoute === 'methodology' ? 'active' : '']">
                         <a routerLink="/methodology"><i class="feather-layout"></i> <span>Methodology</span></a>
                     </li>
                     <li [ngClass]="[activeRoute === 'candidate' ? 'active' : '']">
-                        <a routerLink="/candidate"><i class="feather-layout"></i> <span>Candidate Projects</span></a>
+                        <a routerLink="/candidate"><mat-icon>settings</mat-icon> <span>Candidate Projects</span></a>
                     </li>
                     <li [ngClass]="[activeRoute === 'configurator' ? 'active' : '']">
-                        <a routerLink="/configurator"><i class="feather-layout"></i> <span>Configurator</span></a>
+                        <a routerLink="/configurator"><mat-icon>build</mat-icon> <span>Configurator</span></a>
                     </li>
                     <li [ngClass]="[activeRoute === 'estimator' ? 'active' : '']">
-                      <a routerLink="/estimator"><i class="feather-layout"></i> <span>estimator</span></a>
+                      <a routerLink="/estimator"><mat-icon>build</mat-icon> <span>estimator</span></a>
                   </li>
                     <!-- <li class="submenu">
                         <a href="javascript:void(0);"><i class="feather-command"></i> <span>Multi Level</span> <span

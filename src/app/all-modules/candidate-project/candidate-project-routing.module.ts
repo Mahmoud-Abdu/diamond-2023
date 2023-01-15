@@ -8,8 +8,8 @@ const routes: Routes = [{
   component: CandidateProjectComponent
 },
 {
-  path:'general-information',
-  component:CandidateInfoComponent
+  path: 'general-information',
+  component: CandidateInfoComponent
 }];
 
 @NgModule({

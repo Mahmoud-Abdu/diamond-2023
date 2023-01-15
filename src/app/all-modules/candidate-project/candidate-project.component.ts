@@ -15,10 +15,10 @@ export class CandidateProjectComponent implements OnInit {
   constructor(private api: CallapiService) { }
   ngOnInit(): void {
     this.displayedColumns = ['CPJ_client_name', 'CPJ_name', 'CPJ_description', 'CPJ_owner', 'CPJ_status', 'buttons'];
-    this.api.getProjects().subscribe((data :any) => {
-        this.dataSource= new MatTableDataSource(data)
-        this.dataSource.paginator = this.paginator;
-      }
+    this.api.getProjects().subscribe((data: any) => {
+      this.dataSource = new MatTableDataSource(data)
+      this.dataSource.paginator = this.paginator;
+    }
     )
   }
 
