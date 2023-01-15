@@ -1,80 +1,85 @@
 <div class="page-wrapper">
   <div class="row headerRow">
-      <div class="col-md-4">
-          <h1>Methodology Builder</h1>
-      </div>
-      <div class="col-md-4 col-sm-3 align-self-center text-end">
+    <div class="col-md-4">
+      <h1>Methodology Builder</h1>
+    </div>
+    <div class="col-md-4 col-sm-3 align-self-center text-end">
+      <button class="addBtn">+ Create Methodology</button>
+    </div>
 
-          <button mat-raised-button class="addBtn">
-              + Create Methodology
-          </button>
-      </div>
-
-      <div class="col-md-4" style="position: relative; top: 6px">
-          <div class="input-group rounded">
-              <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                  aria-describedby="search-addon" />
-              <span class="input-group-text border-0" id="search-addon">
-                  <i   style="cursor: pointer;" class="fa fa-search"></i>
-              </span>
-          </div>
-      </div>
-
+    <div class="col-md-4" style="position: relative; top: 6px">
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input
+          matInput
+          (keyup)="applyFilter($event)"
+          placeholder="Ex. ium"
+          #input
+        />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
   </div>
 
-
-
-  <div class="col-mid-12 tableCol ">
-      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-          <!--- Note that these columns can be defined in any order.
+  <div class="col-mid-12 tableCol">
+    <table mat-table [dataSource]="dataSource">
+      <!--- Note that these columns can be defined in any order.
                 The actual rendered columns are set as a property on the row definition" -->
 
-          <!-- name Column -->
-          <ng-container matColumnDef="CMP_name">
-              <th mat-header-cell *matHeaderCellDef class="headerCell"> Name </th>
-              <td mat-cell *matCellDef="let cmp"> {{cmp.CMP_name}} </td>
-          </ng-container>
+      <!-- name Column -->
+      <ng-container matColumnDef="CMP_name">
+        <th mat-header-cell *matHeaderCellDef class="headerCell">Name</th>
+        <td mat-cell *matCellDef="let cmp">{{ cmp.CMP_name }}</td>
+      </ng-container>
 
-          <!-- Name Column -->
-          <ng-container matColumnDef="CMP_description">
-              <th mat-header-cell *matHeaderCellDef class="headerCell"> Description </th>
-              <td mat-cell *matCellDef="let cmp"> {{cmp.CMP_description}} </td>
-          </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="CMP_description">
+        <th mat-header-cell *matHeaderCellDef class="headerCell">
+          Description
+        </th>
+        <!-- <td mat-cell *matCellDef="let cmp"> {{cmp.CMP_description}} </td> -->
+        <td mat-cell *matCellDef="let cmp">
+          <p mat-button (click)="openDialog(cmp.CMP_description)">see more</p>
+        </td>
+      </ng-container>
 
-          <!-- Weight Column -->
-          <ng-container matColumnDef="MTD_mthdType">
-              <th mat-header-cell *matHeaderCellDef class="headerCell"> Category </th>
-              <td mat-cell *matCellDef="let cmp"> {{cmp.MTD_mthdType}} </td>
-          </ng-container>
-          <ng-container matColumnDef="CMP_status">
-            <th mat-header-cell *matHeaderCellDef class="headerCell"> Outcome </th>
-            <td mat-cell *matCellDef="let cmp"> {{cmp.CMP_status}} </td>
-        </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="MTD_mthdType">
+        <th mat-header-cell *matHeaderCellDef class="headerCell">Category</th>
+        <td mat-cell *matCellDef="let cmp">{{ cmp.MTD_mthdType }}</td>
+      </ng-container>
+      <ng-container matColumnDef="CMP_status">
+        <th mat-header-cell *matHeaderCellDef class="headerCell">Outcome</th>
+        <td mat-cell *matCellDef="let cmp">{{ cmp.CMP_status }}</td>
+      </ng-container>
 
-        <!-- Name Column -->
-        <ng-container matColumnDef="usr_full_name">
-            <th mat-header-cell *matHeaderCellDef class="headerCell"> Status </th>
-            <td mat-cell *matCellDef="let cmp"> {{cmp.usr_full_name}} </td>
-        </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="usr_full_name">
+        <th mat-header-cell *matHeaderCellDef class="headerCell">Status</th>
+        <td mat-cell *matCellDef="let cmp">{{ cmp.usr_full_name }}</td>
+      </ng-container>
 
-        <!-- Weight Column -->
-        <ng-container matColumnDef="buttons">
-            <th mat-header-cell *matHeaderCellDef class="headerCell"> Author </th>
-            <td mat-cell *matCellDef="let cmp"> {{cmp.buttons}} </td>
-        </ng-container>
-          <tr mat-header-row *matHeaderRowDef="displayedColumns" class="tableHeaderRow"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns; "></tr>
-
-      </table>
-
+      <!-- Weight Column -->
+      <ng-container matColumnDef="buttons">
+        <th mat-header-cell *matHeaderCellDef class="headerCell">Author</th>
+        <td mat-cell *matCellDef="let cmp">{{ cmp.buttons }}</td>
+      </ng-container>
+      <tr
+        mat-header-row
+        *matHeaderRowDef="displayedColumns"
+        class="tableHeaderRow"
+      ></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
   </div>
   <div class="row pagiRow">
-      <div class="col-md-10" style="width: 95.1%;">
-          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
-              aria-label="Select page of periodic cmps">
-          </mat-paginator>
-      </div>
+    <div class="col-md-10" style="width: 95.1%">
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        aria-label="Select page of periodic cmps"
+      >
+      </mat-paginator>
+    </div>
   </div>
-
 </div>

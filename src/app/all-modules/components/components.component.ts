@@ -15,7 +15,11 @@ export class ComponentsComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private api: CallapiService) { }
-
+/////////////////////// filtter
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
   ngOnInit(): void {
     this.displayedColumns = ['WPC_name', 'CMP_name', 'WPC_category', 'WPC_status', 'usr_full_name', 'buttons'];
     this.api.getComp().subscribe((data: any) => {

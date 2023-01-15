@@ -6,6 +6,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { EstimatorRoutes } from './estimator.routing';
 import {MatIconModule} from '@angular/material/icon';
 import { EstimatorInfoComponent } from './estimator-info/estimator-info.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 
@@ -19,7 +22,9 @@ import { EstimatorInfoComponent } from './estimator-info/estimator-info.componen
     EstimatorRoutes,
     MatTableModule,
     MatPaginatorModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule
 
 
 

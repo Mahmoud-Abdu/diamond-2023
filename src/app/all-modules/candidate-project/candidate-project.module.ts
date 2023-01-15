@@ -8,6 +8,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { CandidateInfoComponent } from './candidate-info/candidate-info.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 @NgModule({
@@ -21,7 +24,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatPaginatorModule,
     MatTableModule,
     MatExpansionModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class CandidateProjectModule { }

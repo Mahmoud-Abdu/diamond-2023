@@ -17,6 +17,12 @@ export class EstimatorComponent implements OnInit {
 
 
   constructor(private api: CallapiService) { }
+  /////////////////////// filtter
+applyFilter(event: Event) {
+  const filterValue = (event.target as HTMLInputElement).value;
+  this.dataSource.filter = filterValue.trim().toLowerCase();
+}
+
   ngOnInit(): void {
     this.displayedColumns = ['CPJ_client_name', 'CPJ_name', 'PPV_name', 'PPV_version', 'EVR_name','PPV_status','buttons'];
     this.api.getEst().subscribe((data: any) => {

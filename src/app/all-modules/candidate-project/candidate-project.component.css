@@ -1,7 +1,12 @@
+
 table {
   width: 95%;
+  margin-top: 70px;
 }
-
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
 .tableCol {
   display: flex;
   justify-content: center;
@@ -62,6 +67,7 @@ table {
 
 .headerCell {
   color: white;
+  width: 0;
 }
 
 .colCell {

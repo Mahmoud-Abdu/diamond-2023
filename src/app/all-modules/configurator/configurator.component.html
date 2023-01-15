@@ -1,85 +1,93 @@
 <div class="page-wrapper">
   <div class="row headerRow">
-      <div class="col-md-4">
-          <h1>Components Builder</h1>
-      </div>
-      <div class="col-md-4 col-sm-3 align-self-center text-end">
+    <div class="col-md-4">
+      <h1>Components Builder</h1>
+    </div>
+    <div class="col-md-4 col-sm-3 align-self-center text-end">
+      <button mat-raised-button class="addBtn" routerLink="add-cofigurator">
+        + Create a component
+      </button>
+    </div>
 
-          <button mat-raised-button class="addBtn" routerLink="add-cofigurator">
-              + Create a component
-          </button>
-      </div>
-
-      <div class="col-md-4" style="position: relative; top: 6px">
-        <mat-form-field>
-          <mat-label>Filter</mat-label>
-          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
-          <mat-icon matSuffix>search</mat-icon>
-        </mat-form-field>
-      </div>
-
+    <div class="col-md-4" style="position: relative; top: 6px">
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input
+          matInput
+          (keyup)="applyFilter($event)"
+          placeholder="Ex. ium"
+          #input
+        />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
   </div>
 
-
-
-  <div class="col-mid-12 tableCol ">
-      <table mat-table [dataSource]="dataSource">
-
-          <!--- Note that these columns can be defined in any order.
+  <div class="col-mid-12 tableCol">
+    <table mat-table [dataSource]="dataSource">
+      <!--- Note that these columns can be defined in any order.
                 The actual rendered columns are set as a property on the row definition" -->
 
-          <!-- Position Column -->
-          <ng-container matColumnDef="CPJ_client_name">
-              <th mat-header-cell *matHeaderCellDef class="headerCell"> Client </th>
-              <td mat-cell *matCellDef="let element"> {{element.CPJ_client_name}} </td>
-          </ng-container>
-          <!-- Name Column -->
-          <ng-container matColumnDef="CPJ_name">
-              <th mat-header-cell *matHeaderCellDef class="headerCell"> Candidate Project Name </th>
-              <td mat-cell *matCellDef="let element"> {{element.CPJ_name}} </td>
-          </ng-container>
+      <!-- Position Column -->
+      <ng-container matColumnDef="CPJ_client_name">
+        <th mat-header-cell *matHeaderCellDef class="headerCell">Client</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.CPJ_client_name }}
+        </td>
+      </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="CPJ_name">
+        <th mat-header-cell *matHeaderCellDef class="headerCell">
+          Candidate Project Name
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element.CPJ_name }}</td>
+      </ng-container>
 
-          <!-- Weight Column -->
-          <ng-container matColumnDef="PPV_name">
-              <th mat-header-cell *matHeaderCellDef class="headerCell"> Plan name </th>
-              <td mat-cell *matCellDef="let element"> {{element.PPV_name}} </td>
-          </ng-container>
-          <ng-container matColumnDef="PPV_version">
-            <th mat-header-cell *matHeaderCellDef class="headerCell"> Outcome </th>
-            <td mat-cell *matCellDef="let element"> {{element.PPV_version}} </td>
-        </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="PPV_name">
+        <th mat-header-cell *matHeaderCellDef class="headerCell">Plan name</th>
+        <td mat-cell *matCellDef="let element">{{ element.PPV_name }}</td>
+      </ng-container>
+      <ng-container matColumnDef="PPV_version">
+        <th mat-header-cell *matHeaderCellDef class="headerCell">Outcome</th>
+        <td mat-cell *matCellDef="let element">{{ element.PPV_version }}</td>
+      </ng-container>
 
-        <!-- Name Column -->
-        <ng-container matColumnDef="PPV_status">
-            <th mat-header-cell *matHeaderCellDef class="headerCell"> Status </th>
-            <td mat-cell *matCellDef="let element"> {{element.PPV_status}} </td>
-        </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="PPV_status">
+        <th mat-header-cell *matHeaderCellDef class="headerCell">Status</th>
+        <td mat-cell *matCellDef="let element">{{ element.PPV_status }}</td>
+      </ng-container>
 
-        <!-- Weight Column -->
-        <ng-container matColumnDef="usr_full_name">
-            <th mat-header-cell *matHeaderCellDef class="headerCell"> Author </th>
-            <td mat-cell *matCellDef="let element"> {{element.usr_full_name}} </td>
-        </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="usr_full_name">
+        <th mat-header-cell *matHeaderCellDef class="headerCell">Author</th>
+        <td mat-cell *matCellDef="let element">{{ element.usr_full_name }}</td>
+      </ng-container>
 
-            <!-- buttons -->
-    <ng-container matColumnDef="buttons">
-      <th mat-header-cell *matHeaderCellDef class="headerCell"></th>
-      <td mat-cell *matCellDef="let element">
-        <mat-icon>more_vert</mat-icon>
-      </td>
-    </ng-container>
-          <tr mat-header-row *matHeaderRowDef="displayedColumns" class="tableHeaderRow"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns; "></tr>
-
-      </table>
-
+      <!-- buttons -->
+      <ng-container matColumnDef="buttons">
+        <th mat-header-cell *matHeaderCellDef class="headerCell"></th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon>more_vert</mat-icon>
+        </td>
+      </ng-container>
+      <tr
+        mat-header-row
+        *matHeaderRowDef="displayedColumns"
+        class="tableHeaderRow"
+      ></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
   </div>
   <div class="row pagiRow">
-      <div class="col-md-10" style="width: 95.1%;">
-          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
-              aria-label="Select page of periodic elements">
-          </mat-paginator>
-      </div>
+    <div class="col-md-10" style="width: 95.1%">
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        aria-label="Select page of periodic elements"
+      >
+      </mat-paginator>
+    </div>
   </div>
-
 </div>

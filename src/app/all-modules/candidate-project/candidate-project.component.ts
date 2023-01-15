@@ -13,6 +13,11 @@ export class CandidateProjectComponent implements OnInit {
   dataSource: any;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   constructor(private api: CallapiService) { }
+    /////////////////////// filtter
+applyFilter(event: Event) {
+  const filterValue = (event.target as HTMLInputElement).value;
+  this.dataSource.filter = filterValue.trim().toLowerCase();
+}
   ngOnInit(): void {
     this.displayedColumns = ['CPJ_client_name', 'CPJ_name', 'CPJ_description', 'CPJ_owner', 'CPJ_status', 'buttons'];
     this.api.getProjects().subscribe((data: any) => {
