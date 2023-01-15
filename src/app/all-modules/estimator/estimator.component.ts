@@ -1,29 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
+import { CallapiService } from 'src/app/shared/callapi.service';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 
 
-export interface PeriodicElement {
-  client: string;
-  candidateProject: string;
-  projectPlan: string;
-  planVersion: number;
-  estimatorName: string;
-  planStatus: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
-  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
-  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
-  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
-  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
-  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
-  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
-  { client: "Delegata", candidateProject: "Diamond Tour Example", projectPlan: "A Ro Demonstration Plan", planVersion: 1, estimatorName: "Estimator for Yesser Tour", planStatus: "Draft" },
-
-
-];
 
 @Component({
   selector: 'app-estimator',
@@ -31,19 +11,20 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./estimator.component.css']
 })
 export class EstimatorComponent implements OnInit {
-
-  displayedColumns: string[] = ['client', 'candidateProject', 'projectPlan', 'planVersion', 'estimatorName', 'planStatus', 'star'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA)
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  displayedColumns: string[];
+  dataSource: any;
 
-  constructor() {
-  }
+
+  constructor(private api: CallapiService) { }
   ngOnInit(): void {
-    setTimeout(() => this.dataSource.paginator = this.paginator);
+    this.displayedColumns = ['CPJ_client_name', 'CPJ_name', 'PPV_name', 'PPV_version', 'EVR_name','PPV_status','buttons'];
+    this.api.getEst().subscribe((data: any) => {
+      this.dataSource = new MatTableDataSource(data.recordset)
+      this.dataSource.paginator = this.paginator;
 
-    console.log('admin is here')
-  }
-  test() {
-    console.log('lol')
+
+
+    })
   }
 }

@@ -1,27 +1,8 @@
+import { CallapiService } from 'src/app/shared/callapi.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-export interface PeriodicElement {
-  client: string;
-  candidateProjectName: string;
-  category: string;
-  outcome: string;
-  status: string;
-  author: string
-}
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  { client: 'Delegata', candidateProjectName: 'Custom Development', category: 'Project office', outcome: 'show more', status: 'Published', author: 'Nicolle Goldman' },
-  { client: 'Delegata', candidateProjectName: 'Custom Development', category: 'Project office', outcome: 'show more', status: 'Published', author: 'Nicolle Goldman' },
-  { client: 'Delegata', candidateProjectName: 'Custom Development', category: 'Project office', outcome: 'show more', status: 'Published', author: 'Nicolle Goldman' },
-  { client: 'Delegata', candidateProjectName: 'Custom Development', category: 'Project office', outcome: 'show more', status: 'Published', author: 'Nicolle Goldman' },
-  { client: 'Delegata', candidateProjectName: 'Custom Development', category: 'Project office', outcome: 'show more', status: 'Published', author: 'Nicolle Goldman' },
-  { client: 'Delegata', candidateProjectName: 'Custom Development', category: 'Project office', outcome: 'show more', status: 'Published', author: 'Nicolle Goldman' },
-  { client: 'Delegata', candidateProjectName: 'Custom Development', category: 'Project office', outcome: 'show more', status: 'Published', author: 'Nicolle Goldman' },
-  { client: 'Delegata', candidateProjectName: 'Custom Development', category: 'Project office', outcome: 'show more', status: 'Published', author: 'Nicolle Goldman' },
-  { client: 'Delegata', candidateProjectName: 'Custom Development', category: 'Project office', outcome: 'show more', status: 'Published', author: 'Nicolle Goldman' },
-  { client: 'Delegata', candidateProjectName: 'Custom Development', category: 'Project office', outcome: 'show more', status: 'Published', author: 'Nicolle Goldman' },
-];
 
 @Component({
   selector: 'app-configurator',
@@ -29,13 +10,19 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./configurator.component.css']
 })
 export class ConfiguratorComponent implements OnInit {
-  displayedColumns: string[] = ['client', 'candidateProjectName', 'category', 'outcome', 'status', 'author'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA)
+  displayedColumns: string[];
+  dataSource: any;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  constructor() { }
+  constructor(private api: CallapiService) { }
 
   ngOnInit(): void {
-    setTimeout(() => this.dataSource.paginator = this.paginator);
+    this.displayedColumns = ['CPJ_client_name', 'CPJ_name', 'PPV_name', 'PPV_version', 'PPV_status', 'usr_full_name','buttons'];
+    this.api.getConf().subscribe((data: any) => {
+      this.dataSource = new MatTableDataSource(data)
+      this.dataSource.paginator = this.paginator
+    })
+
+
   }
 
 }
